@@ -5,7 +5,7 @@ cc_library(
     deps = ["@archive_cjson//:lib_cjson"],
 )
 
-cc_binary(
+cc_test(
     name = "test",
     srcs = ["test.c"],
     deps = [":cJSON"],
