@@ -1,0 +1,11 @@
+"""
+    Bazel module for cJSON
+"""
+
+module(
+    name = "cjson-bazel",
+)
+
+# cJSON Extension:
+cjson_extension = use_extension("//third_party:extensions.bzl", "cjson_extension")
+use_repo(cjson_extension, "archive_cjson")

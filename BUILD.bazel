@@ -1,0 +1,13 @@
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "cJSON",
+    deps = ["@archive_cjson//:lib_cjson"],
+)
+
+cc_binary(
+    name = "test",
+    srcs = ["test.c"],
+    deps = [":cJSON"],
+    visibility = ["//visibility:public"],
+)

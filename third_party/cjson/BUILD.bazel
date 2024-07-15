@@ -1,0 +1,21 @@
+link_options = select({
+    "//conditions:default": [],
+})
+copts = select({
+    "//conditions:default": [],
+})
+
+cc_library(
+    name = "lib_cjson",
+    srcs = [
+        "cJSON.c",
+        "cJSON_Utils.c",
+    ],
+    hdrs = [
+        "cJSON.h",
+        "cJSON_Utils.h",
+    ],
+    copts = copts,
+    linkopts = link_options,
+    visibility = ["//visibility:public"],
+)
